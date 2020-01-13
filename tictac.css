@@ -1,12 +1,34 @@
-
-
-.boarder{
-    text-align: center;    
-    padding: 3em;
+.boarder {
+  text-align: center;
+  padding: 3em;
 }
-div.rows > div{
-    float: left;
-    height: 100px;
-    width: 100px;
-    clear: both;
+div.row > div {
+  float: left;
+  height: 100px;
+  width: 100px;
+
+}
+
+.row {
+  margin: 0 auto;
+  text-align: center;
+  width: 302px;
+  height: auto;
+
+}
+
+.top {
+  border-bottom: 1px black solid;
+}
+
+.bottom {
+    border-top:1px black solid;
+}
+
+.left {
+  border-right: 1px black solid;
+}
+
+.right {
+  border-left: 1px black solid;
 }
