@@ -1,0 +1,12 @@
+
+
+.boarder{
+    text-align: center;    
+    padding: 3em;
+}
+div.rows > div{
+    float: left;
+    height: 100px;
+    width: 100px;
+    clear: both;
+}
