@@ -2,19 +2,17 @@
   text-align: center;
   padding: 3em;
 }
+
 div.row > div {
   float: left;
   height: 100px;
   width: 100px;
-
 }
 
 .row {
   margin: 0 auto;
-  text-align: center;
   width: 302px;
   height: auto;
-
 }
 
 .top {
@@ -22,7 +20,7 @@ div.row > div {
 }
 
 .bottom {
-    border-top:1px black solid;
+  border-top: 1px black solid;
 }
 
 .left {
