@@ -30,3 +30,8 @@ div.row > div {
 .right {
   border-left: 1px black solid;
 }
+
+div.row > div:hover {
+  cursor: crosshair;
+  background-color: lightgreen;
+}
