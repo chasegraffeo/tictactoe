@@ -35,3 +35,9 @@ div.row > div:hover {
   cursor: crosshair;
   background-color: lightgreen;
 }
+
+.cell {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em ;
+
+}
