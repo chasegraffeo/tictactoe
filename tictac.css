@@ -1,18 +1,15 @@
-.board {
-  text-align: center;
-  padding: 3em;
- 
-}
+
+
 
 h1{
-  
+  color: azure;
 }
 
 div.row > div {
   float: left;
   height: 100px;
   width: 100px;
-  background-image: url("castle.jpeg");
+  
   background-size: contain;
 }
 
@@ -52,11 +49,14 @@ div.row > div:hover {
 
 .boarder {
   text-align: center;
-  background-color: rgb(23, 161, 23);
+  background-image: url("castle.jpeg");
+  background-size: contain;
   margin: auto;
   width: 20em;
+  height: 25em;
 }
 
 body {
   background-image: url("medieval-003.jpg");
+  text-align: center;
 }

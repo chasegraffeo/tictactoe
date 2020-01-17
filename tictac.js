@@ -81,7 +81,7 @@ function checkWin() {
 function checkDraw() {
   if (x == 9) {
     endResult = "tater";
-  } else {
+  } else { 
     endResult = 0;
   }
   return endResult;
