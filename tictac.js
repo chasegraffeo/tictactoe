@@ -22,11 +22,16 @@ const winCombo = [
 function cellClicked(e) {
   if (e.target.textContent == 0) {
     if (x % 2 == 0) {
-      e.target.textContent = play1;
+	  e.target.textContent = play1;
+	  var snd = new Audio("SwordsClashing.mp3"); // buffers automatically when created
+	snd.play();
     } else {
-      e.target.textContent = play2;
+	  e.target.textContent = play2;
+	  var snd = new Audio("ArrowsFlying.mp3"); // buffers automatically when created
+	snd.play();
     }
-    x++;
+	x++;
+	
   }
 
   let win = checkWin();
@@ -41,11 +46,12 @@ function cellClicked(e) {
 
 function checkWin() {
   for (let i = 0; i < winCombo.length; i++) {
-    let combo = winCombo[i];
+	let combo = winCombo[i];
     let sum = 0;
     for (let j = 0; j < combo.length; j++) {
       if (cells[combo[j]].textContent === play1) {
-        sum++;
+		sum++;
+		
       }
 
       if (sum === 3) {
@@ -91,3 +97,4 @@ btn.addEventListener(`click`, function() {
   }
   sum = 0;
 });
+
