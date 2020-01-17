@@ -1,5 +1,6 @@
 let cells = document.querySelectorAll(`.cells`)
 let x = 0
+let endResult = 0
 cells.forEach(function (cells) {
 	cells.addEventListener(`click`, cellClicked);
 });
@@ -27,9 +28,14 @@ function cellClicked(e) {
 		x++
 	}
 
-	checkWin();
-	checkDraw()
-
+	let win = checkWin()
+	let draw = checkDraw()
+	console.log(draw);
+	if (win == true){
+		alert(`Winner`)
+	} else if (draw == "tater"){
+		alert(`Draw`)
+	}
 }
 
 function checkWin() {
@@ -42,7 +48,7 @@ function checkWin() {
 			}
 			
 			if (sum === 3) {
-				alert(`WINNER`);
+				endResult = true
 			}
 		}
 	}
@@ -56,31 +62,28 @@ function checkWin() {
 			}
 			
 			if (sum === 3) {
-				alert(`WINNER`);
+				endResult = true
 			}
 		}
 	}
+	return endResult
 }
 
 function checkDraw() {
-	if( x == 9)
-	alert(`DRAW`)
+	if( x == 9){
+		endResult = "tater"
+	}else { endResult = 0}
+	return endResult
 }
 
-// 	//i represents current spot in outside loop (arrays), j represents individual numbers in those arrays
-// }
-/* 
-function checkWin() {
-	if (topLeft.innerHTML === play1 && topMid.innerHTML === play1 && topRight.innerHTML === play1){
-		alert('x wins!')
-	}
-}
- */
-// define winning
+let btn = document.querySelector(`button`);
 
-// define draw
-//  if ( x ==9){
-	// alert(`draw`);
-	// loop through cells and empty text content
-// 	x = 0
-// }
+btn.addEventListener(`click`, function() {
+		x = 0
+		endResult = 0
+		for (let j = 0; j < 9; j++) {
+		(cells[j].textContent = ``)
+		}
+		sum = 0
+});
+ 
