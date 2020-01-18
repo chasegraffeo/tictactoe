@@ -2,7 +2,7 @@ let cells = document.querySelectorAll(`.cells`);
 let x = 0;
 let endResult = 0;
 let winr = ``;
-cells.forEach(function(cells) {
+cells.forEach(function (cells) {
   cells.addEventListener(`click`, cellClicked);
 });
 
@@ -22,16 +22,16 @@ const winCombo = [
 function cellClicked(e) {
   if (e.target.textContent == 0) {
     if (x % 2 == 0) {
-	  e.target.textContent = play1;
-	  var snd = new Audio("SwordsClashing.mp3"); // buffers automatically when created
-	snd.play();
+      e.target.textContent = play1;
+      var snd = new Audio("SwordsClashing.mp3"); // buffers automatically when created
+      snd.play();
     } else {
-	  e.target.textContent = play2;
-	  var snd = new Audio("ArrowsFlying.mp3"); // buffers automatically when created
-	snd.play();
+      e.target.textContent = play2;
+      var snd = new Audio("ArrowsFlying.mp3"); // buffers automatically when created
+      snd.play();
     }
-	x++;
-	
+    x++;
+
   }
 
   let win = checkWin();
@@ -46,32 +46,21 @@ function cellClicked(e) {
 
 function checkWin() {
   for (let i = 0; i < winCombo.length; i++) {
-	let combo = winCombo[i];
-    let sum = 0;
+    let combo = winCombo[i];
+    let play1Sum = 0;
+    let play2Sum = 0;
     for (let j = 0; j < combo.length; j++) {
-      if (cells[combo[j]].textContent === play1) {
-		sum++;
-		
+      if (cells[combo[j]].textContent === play1) { //Checking the text of arr[i][j] if it is equal to X +1 to play1sum same for next except play2Sum
+        play1Sum++;
+      } else if (cells[combo[j]].textContent === play2) {
+        play2Sum++;
       }
-
-      if (sum === 3) {
-        endResult = true;
+      if (play1Sum === 3) { //the reason I use three equal signs is that it checks typing as well as the value so they both have to be int 3
         winr = play1;
-      }
-    }
-  }
-
-  for (let l = 0; l < winCombo.length; l++) {
-    let combo = winCombo[l];
-    let sum = 0;
-    for (let k = 0; k < combo.length; k++) {
-      if (cells[combo[k]].textContent === play2) {
-        sum++;
-      }
-
-      if (sum === 3) {
         endResult = true;
+      } else if (play2Sum === 3) {
         winr = play2;
+        endResult = true;
       }
     }
   }
@@ -81,7 +70,7 @@ function checkWin() {
 function checkDraw() {
   if (x == 9) {
     endResult = "tater";
-  } else { 
+  } else {
     endResult = 0;
   }
   return endResult;
@@ -89,7 +78,7 @@ function checkDraw() {
 
 let btn = document.querySelector(`button`);
 
-btn.addEventListener(`click`, function() {
+btn.addEventListener(`click`, function () {
   x = 0;
   endResult = 0;
   for (let j = 0; j < 9; j++) {
@@ -97,4 +86,3 @@ btn.addEventListener(`click`, function() {
   }
   sum = 0;
 });
-
