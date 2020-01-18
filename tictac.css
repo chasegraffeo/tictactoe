@@ -21,19 +21,19 @@ div.row > div {
 }
 
 .top {
-  border-bottom: 1px black solid;
+  border-bottom: 1px white solid;
 }
 
 .bottom {
-  border-top: 1px black solid;
+  border-top: 1px white solid;
 }
 
 .left {
-  border-right: 1px black solid;
+  border-right: 1px white solid;
 }
 
 .right {
-  border-left: 1px black solid;
+  border-left: 1px white solid;
 }
 
 div.row > div:hover {
