@@ -67,7 +67,7 @@ function checkWin() {
   return [endResult, winr];
 }
 
-function checkDraw() {
+function checkDraw() {//this is checking for draw when bored is full
   if (x == 9) {
     endResult = "tater";
   } else {
