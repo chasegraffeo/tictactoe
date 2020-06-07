@@ -15,25 +15,25 @@ div.row > div {
 
 .row {
   margin: 0 auto;
-  width: 302px;
+  width: 310px;
   height: auto;
   
 }
 
 .top {
-  border-bottom: 1px white solid;
+  border-bottom: 2px white solid;
 }
 
 .bottom {
-  border-top: 1px white solid;
+  border-top: 2px white solid;
 }
 
 .left {
-  border-right: 1px white solid;
+  border-right: 2px white solid;
 }
 
 .right {
-  border-left: 1px white solid;
+  border-left: 2px white solid;
 }
 
 div.row > div:hover {
