@@ -23,10 +23,12 @@ function cellClicked(e) {
   if (e.target.textContent == 0) {
     if (x % 2 == 0) {
       e.target.textContent = play1;
+      //sound works
       // var snd = new Audio("SwordsClashing.mp3"); // buffers automatically when created
       // snd.play();
     } else {
       e.target.textContent = play2;
+      //sound works
       // var snd = new Audio("ArrowsFlying.mp3"); // buffers automatically when created
       // snd.play();
     }
